@@ -1,0 +1,20 @@
+LAYER {
+	13-21 {
+        NAME: 'lte_hq'
+        METADATA {{
+              "wms_title" "lte_hq"
+              "wms_name"   "lte_hq"
+              "wms_include_items" "all" 
+        }}             
+        @connection
+        @layerconfig
+        TYPE: POLYGON
+		DATA:"geom from lte_hq using unique fid using srid=4326"
+        CLASS {
+       	    STYLE {
+                  OUTLINEWIDTH: 1.5
+           	      OUTLINECOLOR: '#061439'
+              }
+       	}
+    }
+}

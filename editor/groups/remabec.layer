@@ -1,0 +1,113 @@
+LAYER {
+        13-21 {
+        NAME: 'topo_mauricie'
+        TYPE: LINE
+        METADATA {{
+              "wms_title" "topo_mauricie"
+              "wms_name"   "topo_mauricie"
+              "wms_include_items" "all"
+        }}
+        @connection
+        @layerconfig
+                DATA:"geom from topo_mauricie using unique fid using srid=4326"
+         CLASS {
+            STYLE {
+                      COLOR: '#888B93'
+                  WIDTH: 0.8
+              }
+        }
+    }
+}
+
+LAYER {
+        13-21 {
+        NAME: 'lac_mauricie'
+        METADATA {{
+              "wms_title" "lac_mauricie"
+              "wms_name"   "lac_mauricie"
+              "wms_include_items" "all"
+        }}
+        @connection
+        @layerconfig
+        TYPE: POLYGON
+                DATA:"geom from lac_mauricie using unique fid using srid=4326"
+         CLASS {
+            STYLE {
+                      COLOR: @watercolor
+                  OUTLINECOLOR:'#469FC3'
+              }
+        }
+    }
+}
+LAYER {
+        13-21 {
+        NAME: 'hydro_mauricie'
+        METADATA {{
+              "wms_title" "hydro_mauricie"
+              "wms_name"   "hydro_mauricie"
+              "wms_include_items" "all"
+        }}
+        @connection
+        @layerconfig
+        TYPE: LINE
+                DATA:"geom from hydro_mauricie using unique fid using srid=4326"
+         CLASS {
+            STYLE {
+                      COLOR: '#469FC3'
+                  WIDTH: 1.5
+              }
+        }
+    }
+}
+
+LAYER {
+        13-21 {
+        NAME: 'raif_mauricie'
+        METADATA {{
+              "wms_title" "raif_mauricie"
+              "wms_name"   "raif_mauricie"
+              "wms_include_items" "all"
+        }}
+        @connection
+        @layerconfig
+        TYPE: POLYGON
+                DATA:"geom from raif_mauricie using unique fid using srid=4326"
+        CLASSITEM : 'couleur'
+        CLASS {
+            EXPRESSION: 'gris pale'
+             STYLE {
+                      COLOR: '#7F848F'
+              }
+        }
+        CLASS {
+            EXPRESSION: 'gris fonce'
+             STYLE {
+                      COLOR: '#7F848F'
+              }
+        }
+    }
+}
+
+LAYER {
+        13-21 {
+        NAME: 'lte_hq'
+        METADATA {{
+              "wms_title" "lte_hq"
+              "wms_name"   "lte_hq"
+              "wms_include_items" "all"
+        }}
+        @connection
+        @layerconfig
+        TYPE: POLYGON
+                DATA:"geom from lte_hq using unique fid using srid=4326"
+        CLASS {
+            STYLE {
+                  OUTLINEWIDTH: 1.5
+                      OUTLINECOLOR: '#061439'
+              }
+        }
+    }
+}
+
+
+

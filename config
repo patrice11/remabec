@@ -1,0 +1,11 @@
+ORDER {
+ 1: groups/ocean.layer
+ 2: groups/land.layer
+ 3: groups/urban.layer
+ 4: groups/water.layer
+ 5: groups/admin.layer
+ 6: groups/roads.layer
+ 7: groups/cities.layer
+ 8: groups/remabec.layer
+ 9: groups/windows.layer
+}
